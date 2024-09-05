@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script type="module" src="generate-trip-details.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Plan Your Vacation</h1>
+    </header>
+    
+    <div>
+        <h3>Destination/s:<h3>
+        <textarea id="destination" rows="2" cols="60"></textarea><br>
+        
+        <h3>How many days long is your vacation?</h3>
+        <textarea id="duration" rows="2" cols="60"></textarea><br>
+        
+        <h3>What are you interested in exploring?</h3>
+        <textarea id="focus" rows="2" cols="60" placeholder="Ex: famous landmarks, restaurants, cultural sites"></textarea><br>
+
+        <h3>How many other people are coming?</h3>
+        <textarea id="number-people" rows="2" cols="60"></textarea><br><br>
+
+        <button id="submitButton">Create Travel Plan</button>
+        <p id="outputText"></p>
+    </div>
+</body>
+</html>
