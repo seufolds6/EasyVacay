@@ -1,4 +1,4 @@
-import { API_KEY } from './api_key.js';
+import { api_key } from './api_key.js';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const submitButton = document.getElementById('submitButton');
@@ -25,7 +25,7 @@ async function generatePlan() {
     const output = document.getElementById('output');
 
     try {
-      const genAI = new GoogleGenerativeAI(API_KEY);
+      const genAI = new GoogleGenerativeAI(api_key);
       const model = genAI.getGenerativeModel({ model: 'gemini-pro' }); 
       const result = await model.generateContent(prompt);
       const response = await result.response;
